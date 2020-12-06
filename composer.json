@@ -1,0 +1,14 @@
+{
+    "name": "clau/dulcemania",
+    "description": "Sistema web para venta de mesas de dulces",
+    "authors": [
+        {
+            "name": "Clau",
+            "email": "claudiatzitlalic@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^7.30",
+        "illuminate/events": "^7.30"
+    }
+}

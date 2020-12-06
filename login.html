@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>DULCE-MANIA</title>
+    <link rel='stylesheet' href='node_modules/bulma/css/bulma.min.css'>
+</head>
+<body>
+<div class="box">
+    <div class="columns is-centered is-2">
+        <div class="column is-half">
+            <div class="notification is-info">
+                <h1>DULCE-MANIA</h1>
+            </div>
+            <form action="login.php" method="POST">
+            <!--<form action="api/index.php/login" method="POST">-->
+                <div class="field">
+                    <label class="label" for="usuario"> Usuario</label>
+                    <input class="input" type="text" id="usuario" name="usuario">
+                </div>
+                <div class="field">
+                    <label class="label" for="password">Password</label>
+                    <input class="input" type="password" id="password" name="password">
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <input class="button" type="submit" value="Enviar">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
