@@ -10,6 +10,7 @@ echo <<<_INIT
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'> 
     <link rel='stylesheet' href='node_modules/bulma/css/bulma.min.css'>
+    <script src='node_modules/axios/dist/axios.min.js'></script>
 
 _INIT;
 

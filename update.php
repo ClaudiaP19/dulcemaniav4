@@ -28,10 +28,29 @@ echo <<<_FORM
                 </div>
                 <div class="field">
                     <div class="control">
-                        <input class="button" type="submit" value="Actualizar">
+                        <input class="button" type="button" value="Actualizar" onclick="update($producto->id_producto)">
                     </div>
                 </div>
             </form>
             </div>
 </section>
+<script>
+function update(id_producto) {
+
+            axios.post(`api/index.php/update/`, {
+                id_producto: id_producto,
+                nombre: document.forms[0].nombre.value,
+                descripcion: document.forms[0].descripcion.value,
+                precio: document.forms[0].precio.value
+            })
+                .then(resp=> {
+                    location.reload();
+                    alert(resp.data.mensaje);
+                })
+                .catch(function (error) {
+                    alert('Error');
+                    console.log(error);
+                });
+        };
+        </script>
 _FORM;

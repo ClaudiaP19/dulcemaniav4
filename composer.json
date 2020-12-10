@@ -1,13 +1,9 @@
 {
-    "name": "clau/dulcemania",
-    "description": "Sistema web para venta de mesas de dulces",
-    "authors": [
-        {
-            "name": "Clau",
-            "email": "claudiatzitlalic@gmail.com"
-        }
-    ],
+    "name": "dell/dulcemania-v4",
+    "license": "MIT",
     "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.3",
         "illuminate/database": "^7.30",
         "illuminate/events": "^7.30"
     }

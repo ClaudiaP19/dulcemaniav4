@@ -29,7 +29,7 @@ $productos = DB::table('productos')->get();
                         <form action='comprar.php' method='post'>
                            <input id='id_producto' type='id_producto' name='id_producto' value='$producto->id_producto' hidden>
                             <input id='cantidad' type='number' name='cantidad' placeholder='cantidad' required>
-                            <input class='button is-success' type='submit' value='COMPRAR'>
+                            <input class='button is-success' type='button' value='COMPRAR' onclick='comprar()'>
                         </form></div>
                         
                         ";
@@ -46,6 +46,24 @@ $productos = DB::table('productos')->get();
     <div data-role="footer" class="has-background-warning">
       <h4>Sistema web para venta de mesas de dulces</i></h4>
     </div>
+    <script>
+        function comprar() {
+            console.log( document.forms[0]);
+            axios.post(`api/index.php/insertar_carrito/`, {
+                cantidad: document.forms[0].cantidad.value,
+                id_producto: document.forms[0].id_producto.value
+            })
+                .then(resp=> {
+                    location.reload();
+                    alert('Producto agregado');
+
+                })
+                .catch(function (error) {
+                    alert('Error');
+                    console.log(error);
+                });
+        }
+    </script>
   </body>
 </html>
 _END;
